@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/themes/default/style.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="dist/jstree.min.js"></script>
+</head>
+
+<body>
+    <div id="tree">
+
+    </div>
+    <script>
+
+      
+
+// $.jstree.defaults.core.themes.responsive = true;
+
+// $('#tree').jstree({
+//   'core' : {
+//     'data' : {
+//       'url' : 'stamps.html',
+//       'data' : function (node) {
+//         return { 'id' : node.id };
+//       }
+//     }
+//   }
+// });
+
+
+$('#tree').jstree({
+  
+    'core': {
+        'data': {
+            'url': 
+                'ajax_roots.json'
+            ,
+            'data': function(node) {
+                return {
+                    'id': node.id
+                };
+            }
+        }
+    }
+});
+    </script>
+
+
+</body>
+
+</html>
